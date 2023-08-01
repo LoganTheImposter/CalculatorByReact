@@ -1,0 +1,75 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 400% 400%;
+    animation: rotateGradient 10s linear infinite;
+}
+.calculator {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 120px;
+    
+    border-radius: 8px;
+    padding: 10px;  
+    background: #3a4452;     
+  }
+  
+  .display {
+    height: 50px;
+    border: 1px solid #3a4452;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;    
+}
+  
+  .button {
+    height: 50px;
+    font-size: 20px;
+    border: 1px solid #3a4452;
+    border-radius: 8px;
+    box-shadow: -8px -8px 15px rgba(0, 0, 0, 0.1), 5px 5px 15px rgb(0, 0, 0, 0.2);
+    color: #fff;
+    background-color: #3a4452;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .button:hover {
+    background-color: #e1e1e1;
+  }
+  
+  .equal {
+    grid-column: span 2;
+  }
+  .delete, .equal, .clear, .option{
+    color: greenyellow;
+  }
+  
+  @keyframes rotateGradient{
+    0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    100% {
+        background-position: 0% 50%;
+      }
+}
